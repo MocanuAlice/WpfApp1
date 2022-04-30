@@ -4,9 +4,93 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        mc:Ignorable="d" FontSize="20" FontFamily="Global User Interface"
+        Title="Book Tracker" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Remember what you read."
+               Grid.Column="1"
+               Grid.Row="1"
+               Grid.ColumnSpan="6"
+               HorizontalAlignment="Center" 
+               FontSize="48">
+        </Label>
+
+        <Label Content="Add new book"
+               Grid.Column="1"
+               Grid.Row="2"
+               Grid.ColumnSpan="2"
+               FontSize="16"
+               Margin="10,0,0,0"></Label>
+
+        <TextBlock Text="Title"
+                   Grid.Column="1"
+                   Grid.Row="3"></TextBlock>
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="4"
+                 Width="250"
+                 Margin="5,0,0,5"></TextBox>
+
+        <TextBlock Text="Author"
+                   Grid.Column="1"
+                   Grid.Row="5"></TextBlock>
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="6"
+                 Width="250"
+                 Margin="5,0,0,5"></TextBox>
         
+        <TextBlock Text="Total pages"
+                   Grid.Column="1"
+                   Grid.Row="7"></TextBlock>
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="8"
+                 Width="250"
+                 Margin="5,0,0,0"></TextBox>
+        
+        <CheckBox Grid.Column="1"
+                  Grid.Row="9"
+                  Grid.ColumnSpan="2" 
+                  Content="binge read" 
+                  HorizontalAlignment="Center" 
+                  VerticalAlignment="Top"
+                  Margin="0,30,0,0"/>
+
+        <Button x:Name="savedBookData"
+                Grid.Column="1"
+                Grid.Row="10"
+                Content="Save"
+                FontStyle="Italic"
+                Margin="0,30,30,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"></Button>
+
     </Grid>
 </Window>
+
